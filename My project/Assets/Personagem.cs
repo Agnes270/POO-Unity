@@ -21,17 +21,97 @@ public class Cyborg
         numero_de_mao = numero_de_mao;
     }
 
-    public void MostrarStatus()
+public class Cyborg
+{
+    private string Nome;
+    private int Energia;
+    private int PoderLaser;
+    private int DefesaCibernetica;
+    private int Velocidade;
+    private bool PossuiJetpack;
+    private string Modelo;
+
+    public void AtribuirNome(string nome)
     {
-        Console.WriteLine($"=== CYBORG: {Nome} ===");
-        Console.WriteLine($"Modelo: {numero_de_mao}");
-        Console.WriteLine($"Energia: {Energia}");
-        Console.WriteLine($"forca_ataque: {forca_ataque}");
-        Console.WriteLine($"forca_do_pulo: {forca_do_pulo}");
-        Console.WriteLine($"Velocidade: {Velocidade}");
-        Console.WriteLine($"numero_de_pes: {(numero_de_pes ? "SIM" : "NÃO")}");
+        this.Nome = nome;
     }
 
+    public string NomeDoCyborg()
+    {
+        return this.Nome;
+    }
+
+    public void AtribuirEnergia(int energia)
+    {
+        this.Energia = energia;
+    }
+
+    public int EnergiaDoCyborg()
+    {
+        return this.Energia;
+    }
+
+    public void AtribuirPoderLaser(int poderLaser)
+    {
+        this.PoderLaser = poderLaser;
+    }
+
+    public int PoderLaserDoCyborg()
+    {
+        return this.PoderLaser;
+    }
+
+    public void AtribuirDefesaCibernetica(int defesaCibernetica)
+    {
+        this.DefesaCibernetica = defesaCibernetica;
+    }
+
+    public int DefesaCiberneticaDoCyborg()
+    {
+        return this.DefesaCibernetica;
+    }
+
+    public void AtribuirVelocidade(int velocidade)
+    {
+        this.Velocidade = velocidade;
+    }
+
+    public int VelocidadeDoCyborg()
+    {
+        return this.Velocidade;
+    }
+
+    public void AtribuirPossuiJetpack(bool possuiJetpack)
+    {
+        this.PossuiJetpack = possuiJetpack;
+    }
+
+    public bool PossuiJetpackDoCyborg()
+    {
+        return this.PossuiJetpack;
+    }
+
+    public void AtribuirModelo(string modelo)
+    {
+        this.Modelo = modelo;
+    }
+
+    public string ModeloDoCyborg()
+    {
+        return this.Modelo;
+    }
+
+    public void MostrarStatus()
+    {
+        Console.WriteLine($"=== STATUS DO CYBORG ===");
+        Console.WriteLine($"Nome: {Nome}");
+        Console.WriteLine($"Modelo: {Modelo}");
+        Console.WriteLine($"Energia: {Energia}");
+        Console.WriteLine($"Poder Laser: {PoderLaser}");
+        Console.WriteLine($"Defesa Cibernética: {DefesaCibernetica}");
+        Console.WriteLine($"Velocidade: {Velocidade}");
+        Console.WriteLine($"Jetpack: {(PossuiJetpack ? "SIM" : "NÃO")}");
+    }
     public void Atacar()
     {
         Console.WriteLine($"{Nome} dispara um raio laser com poder {forca_ataque}!");
