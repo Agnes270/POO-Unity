@@ -1,42 +1,32 @@
-using System;
+using UnityEditor;
+using UnityEngine;
 
-public class Cyborg
+
+public class personagem  : MonoBehaviour
 {
+    
+    [SerializeField]
     public string Nome;
+    [SerializeField]
     public int Energia;
+    [SerializeField]
     public int forca_ataque;
+    [SerializeField]
     public int forca_do_pulo;
-    public int Velocidade;
-    public bool numero_de_pes;
-    public string numero_de_mao;
+    [SerializeField]
+    public int velocidade;
+    [SerializeField]
+    public int numero_de_pes;
+    [SerializeField]
+    private int numero_de_maos;
 
-    public Cyborg(string nome, int energia, int forca_ataque, int forca_do_pulo, int velocidade, bool lnumero_de_pes, string numero_de_mao)
-    {
-        Nome = nome;
-        Energia = energia;
-        forca_ataque = forca_ataque;
-        forca_do_pulo = forca_do_pulo;
-        Velocidade = velocidade;
-        numero_de_pes = numero_de_pes;
-        numero_de_mao = numero_de_mao;
-    }
-
-public class Cyborg
-{
-    private string Nome;
-    private int Energia;
-    private int PoderLaser;
-    private int DefesaCibernetica;
-    private int Velocidade;
-    private bool PossuiJetpack;
-    private string Modelo;
-
+    
     public void AtribuirNome(string nome)
     {
         this.Nome = nome;
     }
 
-    public string NomeDoCyborg()
+    public string getNome()
     {
         return this.Nome;
     }
@@ -46,87 +36,50 @@ public class Cyborg
         this.Energia = energia;
     }
 
-    public int EnergiaDoCyborg()
+    public void AtribuirForca_Ataque(int ataque)
     {
-        return this.Energia;
+        this.forca_ataque = ataque;
     }
 
-    public void AtribuirPoderLaser(int poderLaser)
+    public void AtribuirForca_Do_pulo(int pulo)
     {
-        this.PoderLaser = poderLaser;
+        this.forca_do_pulo = pulo;
     }
 
-    public int PoderLaserDoCyborg()
+    public float NForca_do_pulo()
     {
-        return this.PoderLaser;
-    }
-
-    public void AtribuirDefesaCibernetica(int defesaCibernetica)
-    {
-        this.DefesaCibernetica = defesaCibernetica;
-    }
-
-    public int DefesaCiberneticaDoCyborg()
-    {
-        return this.DefesaCibernetica;
+        return this.forca_do_pulo;
     }
 
     public void AtribuirVelocidade(int velocidade)
     {
-        this.Velocidade = velocidade;
+        this.velocidade = velocidade;
     }
 
-    public int VelocidadeDoCyborg()
+    public float Velocidade()
     {
-        return this.Velocidade;
+        return this.velocidade;
     }
 
-    public void AtribuirPossuiJetpack(bool possuiJetpack)
+    public void AtribuirNumero_de_pes(int numero_de_pes)
     {
-        this.PossuiJetpack = possuiJetpack;
+        this.numero_de_pes = numero_de_pes;
     }
 
-    public bool PossuiJetpackDoCyborg()
+    public int Numero_de_pes()
     {
-        return this.PossuiJetpack;
+        return this.numero_de_pes;
     }
 
-    public void AtribuirModelo(string modelo)
+    public void AtribuirNumero_de_maos(int numero_de_maos)
     {
-        this.Modelo = modelo;
+        this.numero_de_maos = numero_de_maos;
     }
 
-    public string ModeloDoCyborg()
+    public int Numero_de_maos()
     {
-        return this.Modelo;
+        return this.Numero_de_maos();
     }
-
-    public void MostrarStatus()
-    {
-        Console.WriteLine($"=== STATUS DO CYBORG ===");
-        Console.WriteLine($"Nome: {Nome}");
-        Console.WriteLine($"Modelo: {Modelo}");
-        Console.WriteLine($"Energia: {Energia}");
-        Console.WriteLine($"Poder Laser: {PoderLaser}");
-        Console.WriteLine($"Defesa Cibernética: {DefesaCibernetica}");
-        Console.WriteLine($"Velocidade: {Velocidade}");
-        Console.WriteLine($"Jetpack: {(PossuiJetpack ? "SIM" : "NÃO")}");
-    }
-    public void Atacar()
-    {
-        Console.WriteLine($"{Nome} dispara um raio laser com poder {forca_ataque}!");
-    }
-
-    public void Defender()
-    {
-        Console.WriteLine($"{Nome} ativa escudo de defesa cibernética ({forca_do_pulo})!");
-    }
-
-    public void Voar()
-    {
-        if (numero_de_pes)
-            Console.WriteLine($"{Nome} decola com seu jetpack!");
-        else
-            Console.WriteLine($"{Nome} não possui jetpack.");
-    }
+    
+    
 }

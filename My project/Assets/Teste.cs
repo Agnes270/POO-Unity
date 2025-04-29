@@ -6,6 +6,8 @@ public class Teste : MonoBehaviour
     Carro gol = new Carro();
     
     Caminhao caminhao = new Caminhao();
+    
+    Inimigo cyborg = new Inimigo();
 
     void Start()
     {
@@ -53,7 +55,6 @@ public class Teste : MonoBehaviour
         }
 
     }
-
 
         
 }
