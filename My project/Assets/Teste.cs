@@ -6,9 +6,9 @@ public class Teste : MonoBehaviour
     Carro gol = new Carro();
     
     Caminhao caminhao = new Caminhao();
-    
-    Inimigo cyborg = new Inimigo();
 
+    Personagem joao = new Personagem();
+    Inimigo ork = new Inimigo();
     void Start()
     {
 
@@ -41,8 +41,8 @@ public class Teste : MonoBehaviour
         caminhao.AtribuirPreco(6000.00f);
         caminhao.AtribuirCor("Azul");
         caminhao.AtribuirNome("caminhão do falstão");
-        
-        //fusca.AtribuirTipoDeCarroceria("Larga");
+            
+            //fusca.AtribuirTipoDeCarroceria("Larga");
         
         if (fusca.ComparPreco(caminhao))
         {
@@ -54,7 +54,24 @@ public class Teste : MonoBehaviour
 
         }
 
-    }
-
         
-}
+        joao.AtribuirNome("João Roberto II");
+        joao.AtribuirEnergia(10);
+        joao.AtribuirForca_Ataque(12);
+        joao.AtribuirForca_Do_pulo(6);
+        joao.AtribuirVelocidade (8);
+        joao.AtribuirNumero_de_pes(2);
+        joao.AtribuirNumero_de_maos(2);
+
+        ork.AtribuirNome("Ork Gob");
+        ork.AtribuirEnergia (23);
+        ork.AtribuirForca_Ataque (15);
+        ork.AtribuirForca_Do_pulo (8);
+        ork.AtribuirVelocidade (6);
+        ork.AtribuirNumero_de_pes(2);
+        ork.AtribuirNumero_de_maos(4);
+        
+        
+    }
+    
+    }

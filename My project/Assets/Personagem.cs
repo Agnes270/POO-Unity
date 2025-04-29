@@ -2,13 +2,13 @@ using UnityEditor;
 using UnityEngine;
 
 
-public class personagem  : MonoBehaviour
+public class Personagem  : MonoBehaviour
 {
     
     [SerializeField]
-    public string Nome;
+    public string nome;
     [SerializeField]
-    public int Energia;
+    public int energia;
     [SerializeField]
     public int forca_ataque;
     [SerializeField]
@@ -23,22 +23,31 @@ public class personagem  : MonoBehaviour
     
     public void AtribuirNome(string nome)
     {
-        this.Nome = nome;
+        this.nome = nome;
     }
 
     public string getNome()
     {
-        return this.Nome;
+        return this.nome;
     }
 
     public void AtribuirEnergia(int energia)
     {
-        this.Energia = energia;
+        this.energia = energia;
     }
 
+    
     public void AtribuirForca_Ataque(int ataque)
     {
         this.forca_ataque = ataque;
+    }
+    public int Forca_Ataque()
+    {
+        return this.forca_ataque;
+    }
+    public int Energia()
+    {
+        return this.energia;
     }
 
     public void AtribuirForca_Do_pulo(int pulo)
