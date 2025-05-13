@@ -1,15 +1,14 @@
 using UnityEngine;
 
-public class Play : MonoBehaviour
+public class movimentodoPlay : MonoBehaviour
 {
-    private Rigidbory rigididbory;
+    
 
     public float velocidade = 10;
         
     void Start()
     {
-        rigididbory = GetComponent<Rigidbory>();
-        
+      
     }
     
     void Update()
@@ -49,10 +48,3 @@ public class Play : MonoBehaviour
     
 }
 
-internal class Rigidbory
-{
-}
-
-internal class Rigibori
-{
-}
